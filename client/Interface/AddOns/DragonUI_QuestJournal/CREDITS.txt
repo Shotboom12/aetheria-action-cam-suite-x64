@@ -1,0 +1,7 @@
+Local DragonUI Quest Journal companion
+Parchment BookPage, Divider-H and OptionBackground-Common: reused from the installed DialogUI companion, licensed under DialogUI LICENSE (included).
+chrome-frame.tga, chrome-buttons.tga, IconFrameGold.tga: supplied locally by the user.
+Stone background: referenced from installed DragonUI Forever art; DragonUI is optional.
+Native quest controllers and widgets remain in the game client; reference sources are kept only in the local development lab, not bundled.
+JournalFold.tga: locally generated high-resolution feathered shading, no external art service.
+JournalScrollArrows/Rail: copied from installed DragonUI CharacterPanel scrollbar artwork; JournalScrollThumb assembled from its matching cap/middle sprites.

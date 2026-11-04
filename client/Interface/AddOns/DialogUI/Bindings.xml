@@ -1,0 +1,4 @@
+<Bindings>
+    <!-- Book-only edition: no quest/gossip keybind registrations.
+         The book reader retains its own temporary SPACE binding while open. -->
+</Bindings>

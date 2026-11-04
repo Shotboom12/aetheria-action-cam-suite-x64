@@ -1,0 +1,59 @@
+ACTION CAMERA SUITE: CREATORS, ATTRIBUTION AND UPSTREAM SOURCES
+==============================================================
+We distribute an integrated camera-oriented WoW 3.3.5a mod pack
+built on the work of the following original developers.
+
+IMMERSION
+  Original creator: Sebastian Lindfors (seblindfors)
+  Original project: https://github.com/seblindfors/Immersion
+  Original Immersion quest-and-gossip interface code and assets
+  remain credited to the upstream project.
+  Bundled license: Interface/AddOns/Immersion/LICENSE.md
+
+DRAGONUI
+  Original creator / 3.3.5a maintainer: NeticSoul
+  Original project: https://github.com/NeticSoul/DragonUI
+  DragonUI and the DragonUI_Options UI framework are upstream work.
+  Additional borrowed/adapted assets, libraries and contributors
+  are documented in DragonUI/THIRD_PARTY_NOTICES.md and LICENSES.
+  Bundled license: Interface/AddOns/DragonUI/LICENSE.txt
+  Their third-party art/fonts/libraries retain their original terms.
+
+DIALOGUI
+  Original creator: Sxus (original DialogUI).
+  Original source: https://github.com/Jslquintero/DialogUI
+  Wrath of the Lich King port: Bset.
+  WotLK port source: https://github.com/ghbset/DialogUI-WotLK
+  Bundled fork and 3.3.5a adaptation: Stefan2102.
+  Included edition is the book-reader / Immersion compatibility fork.
+  See Interface/AddOns/DialogUI/README.md, the DialogUI .toc
+  and its bundled MIT LICENSE for original attribution and terms.
+
+SEYRIS TOOLS
+  Original module creator and repository maintainer: Morfium-G.
+  Source repository: https://github.com/Morfium-G/wxl-seyris-tools
+  This shared toolkit is a separate WarcraftXL v1.1 extension,
+  providing cdbc handling, editing, settings and crash reports.
+  Its original authorship is credited independently of our
+  custom WXL integration.
+  A separate redistribution license was not identified in
+  the upstream repository; confirm permission before wide release.
+
+WARCRAFTXL FRAMEWORK
+  Original open-source project: WarcraftXL and contributors.
+  Core source: https://github.com/WarcraftXL/wxl-core
+  Framework: GNU General Public License, version 3.
+  We distribute adaptations of the framework, not a claim
+  to have created the upstream WXL runtime.
+
+THANKS / REDISTRIBUTION NOTES
+  Thanks to these original authors and their contributors for the
+  addons, framework, and tools underlying this release.
+  Credit is NOT a substitute for complying with upstream licenses.
+  Other bundled addons also have their own rights; check
+  THIRD_PARTY_LICENSE_NOTICES.txt, ADDON_LICENSE_REVIEW.csv and
+  upstream per-addon NOTICE/LICENSE files.
+  The release has not yet completed an unrestricted redistribution
+  rights review for third-party artwork and addon content.
+  This is a public TEST candidate and is not endorsed by the
+  original addon authors, WarcraftXL or Blizzard Entertainment.

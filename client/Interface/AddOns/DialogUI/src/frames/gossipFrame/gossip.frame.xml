@@ -1,0 +1,237 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Script file="src\frames\gossipFrame\gossip.frame.lua" />
+    <Button name="DGossipTitleButtonTemplate" virtual="true" hidden="false">
+        <Size x="400" y="20" />
+        <Scripts>
+            <OnClick>
+                DGossipTitleButton_OnClick();
+            </OnClick>
+        </Scripts>
+        <HighlightTexture
+            file="Interface\AddOns\DialogUI\src\assets\art\parchment\ButtonHighlight-Gossip"
+            alphaMode="ADD" />
+        <Layers>
+            <Layer level="OVERLAY">
+                <Texture name="$parentGossipIcon">
+                    <Size>
+                        <AbsDimension x="20" y="20" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="5" y="-6" />
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <ButtonText inherits="DQuestButtonTitleGossip" justifyH="LEFT">
+            <Size x="275" y="0" />
+            <Anchors>
+                <Anchor point="LEFT">
+                    <Offset>
+                        <AbsDimension x="30" y="0" />
+                        <!-- This move the text inside the button-->
+                    </Offset>
+                </Anchor>
+            </Anchors>
+        </ButtonText>
+    </Button>
+    <Frame name="DGossipFrame" toplevel="true" parent="UIParent" movable="true" enableMouse="true"
+        hidden="true">
+        <Size>
+            <AbsDimension x="384" y="512" />
+        </Size>
+        <Anchors>
+            <Anchor point="TOPLEFT">
+                <Offset>
+                    <AbsDimension x="0" y="-104" />
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Frames>
+            <Frame name="DGossipNpcNameFrame">
+                <Size>
+                    <AbsDimension x="300" y="14" />
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="DGossipFrame" relativePoint="TOP">
+                        <Offset>
+                            <AbsDimension x="4" y="-50" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <!-- Header divider on BACKGROUND so the portrait (BORDER) draws over it. -->
+                    <Layer level="BACKGROUND">
+                        <Texture name="DGossipHeaderDivider"
+                            file="Interface\AddOns\DialogUI\src\assets\art\parchment\Divider-H">
+                            <Size>
+                                <AbsDimension x="360" y="26" />
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOP" relativeTo="DGossipFrame" relativePoint="TOP">
+                                    <Offset>
+                                        <AbsDimension x="60" y="-72" />
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                    <Layer level="ARTWORK">
+                        <!-- NPC name centered over the divider. -->
+                        <FontString name="DGossipFrameNpcNameText" inherits="DQuestTitleFont" justifyH="CENTER">
+                            <Size>
+                                <AbsDimension x="340" y="20"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOP" relativeTo="DGossipFrame" relativePoint="TOP">
+                                    <Offset>
+                                        <AbsDimension x="60" y="-42" />
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <!-- Rule above the Goodbye button. -->
+                        <Texture name="DGossipFooterDivider"
+                            file="Interface\AddOns\DialogUI\src\assets\art\parchment\Divider-H">
+                            <Size>
+                                <AbsDimension x="450" y="38" />
+                            </Size>
+                            <Anchors>
+                                <Anchor point="BOTTOM" relativeTo="DGossipFrame" relativePoint="BOTTOM">
+                                    <Offset>
+                                        <AbsDimension x="50" y="76" />
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                    <!-- Portrait below the ring so the face sits beneath the border. -->
+                    <Layer level="BORDER">
+                        <Texture name="DGossipFramePortrait">
+                            <Size>
+                                <AbsDimension x="59" y="59" />
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="12" y="13" />
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                    <Layer level="OVERLAY">
+                        <Texture name="DGossipFramePortraitRing"
+                            file="Interface\AddOns\DialogUI\src\assets\art\parchment\PortraitRing">
+                            <Size>
+                                <AbsDimension x="124" y="124" />
+                            </Size>
+                            <Anchors>
+                                <Anchor point="CENTER" relativeTo="DGossipFramePortrait" relativePoint="CENTER" />
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnLoad>
+                        this:SetFrameLevel(this:GetFrameLevel() + 2);
+                    </OnLoad>
+                </Scripts>
+            </Frame>
+            <Frame name="DGossipFrameGreetingPanel" inherits="DUIPanelParchmentTemplate"
+                hidden="false">
+                <Frames>
+                    <Button name="DGossipFrameGreetingGoodbyeButton" inherits="DUIPanelButtonTemplate" text="GOODBYE">
+                        <Size>
+                            <AbsDimension x="200" y="40" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="BOTTOMRIGHT" relativeTo="DGossipFrame" relativePoint="BOTTOMRIGHT">
+                                <Offset>
+                                    <AbsDimension x="80" y="40" />
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                HideUIPanel(DGossipFrame);
+                            </OnClick>
+                        </Scripts>
+                    </Button>
+                    <ScrollFrame name="DGossipGreetingScrollFrame"
+                        inherits="DUIPanelScrollFrameTemplate">
+                        <Size>
+                            <AbsDimension x="400" y="300" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="DGossipFrame">
+                                <Offset>
+                                    <!-- move contents of the frame -->
+                                    <AbsDimension x="40" y="-108" />
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <ScrollChild>
+                            <Frame name="DGossipGreetingScrollChildFrame">
+                                <Size>
+                                    <AbsDimension x="512" y="300" />
+                                </Size>
+                                <Layers>
+                                    <Layer>
+                                        <FontString name="DGossipGreetingText" inherits="DQuestFont"
+                                            text="Filler Text" justifyH="LEFT">
+                                            <Size>
+                                                <AbsDimension x="370" y="0" />
+                                            </Size>
+                                            <Anchors>
+                                                <Anchor point="TOPLEFT">
+                                                    <Offset>
+                                                        <AbsDimension x="10" y="-10" />
+                                                    </Offset>
+                                                </Anchor>
+                                            </Anchors>
+                                        </FontString>
+                                    </Layer>
+                                </Layers>
+                                <Frames>
+                                    <Frame name="DGossipSpacerFrame">
+                                        <Size>
+                                            <AbsDimension x="5" y="35" />
+                                        </Size>
+                                        <Anchors>
+                                            <Anchor point="TOP">
+                                                <Offset>
+                                                    <AbsDimension x="0" y="0" />
+                                                </Offset>
+                                            </Anchor>
+                                        </Anchors>
+                                    </Frame>
+                                </Frames>
+                            </Frame>
+                        </ScrollChild>
+                    </ScrollFrame>
+                </Frames>
+            </Frame>
+        </Frames>
+        <Scripts>
+            <OnLoad>
+                DGossipFrame_OnLoad();
+            </OnLoad>
+            <OnShow>
+                DGossipFrame_OnShow();
+            </OnShow>
+            <OnEvent>
+                DGossipFrame_OnEvent();
+            </OnEvent>
+            <OnHide>
+                DGossipFrame_OnHide();
+            </OnHide>
+            <OnMouseWheel>
+                return;
+            </OnMouseWheel>
+        </Scripts>
+    </Frame>
+</Ui>

@@ -1,0 +1,23 @@
+THIRD-PARTY LICENSE AND PUBLIC REDISTRIBUTION REVIEW
+====================================================
+I don't give a shit what you do with this mod. Distribute it, make it your own, whatever. As long as you're having fun, we're cool.
+
+The installable contains code/assets from third-party addons and the
+WarcraftXL community runtime (DragonUI, Immersion, DialogUI, etc.),
+plus our modified camera-side extensions. Existing upstream license
+and attribution files are left intact. The source-only release
+includes the latest locally available WXL core baseline source,
+authored modifications and license files in the corresponding trees.
+
+Before publishing to an unrestricted audience, verify licenses for
+every included addon, bundled audio/font/art asset, and WXL runtime.
+Do NOT claim to own third-party code, republish copyrighted Blizzard
+WoW assets without permission, or strip original credits.
+
+No full game executable, proprietary WoW Data/MPQs, optional
+Eclipse dinput8.dll runtime, account credentials/roster, or server
+repack binary is packaged. The optional WXL Eclipse bridge is our own
+customization; it requires users to provide their own compatible
+Eclipse runtime separately.
+
+Seyris Tools attribution: original author Morfium-G, https://github.com/Morfium-G/wxl-seyris-tools. Verify separate redistribution permission for this independently maintained toolkit.

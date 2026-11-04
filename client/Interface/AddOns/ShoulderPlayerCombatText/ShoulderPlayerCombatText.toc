@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: Shoulder Player Combat Text
+## Notes: Anchors incoming combat text to the shoulder-camera player; preserves existing styling.
+## Version: 0.4.23
+Anchor.lua

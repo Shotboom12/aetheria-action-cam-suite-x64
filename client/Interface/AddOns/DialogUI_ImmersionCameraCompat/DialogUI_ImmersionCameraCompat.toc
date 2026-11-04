@@ -1,0 +1,12 @@
+## Interface: 30300
+## Title: DialogUI + Immersion Camera Compatibility
+## Notes: Preserves camera-triggering DialogUI frames and restores WriteQuest handwriting audio for Immersion dialogue.
+## Author: Project compatibility layer
+## Version: 1.0.2-experimental
+## Dependencies: DialogUI, Immersion, !ActionCameraAuthorSettings
+## SavedVariables: DUIImmersionHandwriting
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+bridge.lua
+handwriting.lua

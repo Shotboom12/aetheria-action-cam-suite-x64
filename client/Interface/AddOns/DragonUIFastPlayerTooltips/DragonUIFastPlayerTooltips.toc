@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: DragonUI Fast Player Tooltips
+## Notes: Fast unit and world-object tooltip fade; preserves DragonUI styling and native item/spell tips.
+## Version: 1.0.3
+## Dependencies: DragonUI
+DragonUIFastPlayerTooltips.lua

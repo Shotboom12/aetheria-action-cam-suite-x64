@@ -1,0 +1,15 @@
+## Interface: 30300
+## Title: |cffd6ad60DragonUI Immersive Character Screen|r
+## Notes: Parchment character information, world-character equipment layout, and integrated bags.
+## Author: Michael / Codex
+## Version: 0.7.2
+## RequiredDeps: DragonUI
+## OptionalDeps: DragonUI_QuestJournal, DialogUI
+
+Layout.lua
+ControlArt.lua
+PaneSkin.lua
+Motion.lua
+HUD.lua
+Immersive.lua
+
