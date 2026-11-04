@@ -25,7 +25,7 @@ Full Action Combat, launcher integration, and exact bow draw/reload feedback are
 
 ## License and credits
 
-Michael Noble gave permission to publish the Action Cam port and source. The owner confirms addon creator permission for included third-party addon distribution. Keep each upstream license and credit with its files.
+Michael Noble gave permission to publish the Action Cam port and source. Keep each upstream license and credit with its files.
 
 No blanket license is asserted over combined files. The native host includes WarcraftXL API headers marked GPL-3.0-or-later while the integrated client baseline has GPL-2 terms. Review licensing compatibility before distributing a combined client.
 
