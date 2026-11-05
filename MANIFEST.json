@@ -11,8 +11,8 @@
   },
   {
     "path": "README.md",
-    "sha256": "402265e1dc9fe1e351cc9e9e4b0b8a311b8658cdaec5c380114ae608d36dca99",
-    "bytes": 3215
+    "sha256": "6d6682d1ed41889b1c049966c4775774673c2effcf204ccaa3a14ecb0d9877f0",
+    "bytes": 3593
   },
   {
     "path": "THIRD_PARTY_LICENSE_NOTICES.txt",
@@ -26,13 +26,13 @@
   },
   {
     "path": "client/Addons/AetheriaActionCamera/AetheriaActionCamera.lua",
-    "sha256": "105e47b1f96f0e42ccd869ef60bbe7b022375a8d694475fa679503157ad533a8",
-    "bytes": 10903
+    "sha256": "473a1db901e0c0bb2f03bc8d8ce58406ebde9bf26496fb7d291447bb6a03a2c0",
+    "bytes": 11220
   },
   {
     "path": "client/Addons/AetheriaActionCamera/AetheriaActionCamera.toc",
-    "sha256": "541ee10236d97b486c852013e72387784179be463f3970cd95248b04592c1211",
-    "bytes": 262
+    "sha256": "0bec50ad3cb840e4d7aafbd2cfb019ed7705be6ddcd00f3ddc2df08d85d05100",
+    "bytes": 268
   },
   {
     "path": "client/Addons/AetheriaActionCamera/Bindings.xml",
@@ -171,13 +171,13 @@
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/ActionCameraPort.cpp",
-    "sha256": "d21519e2b9629ee0a5995e339d8df1d65708e4708aff75b1485ec0e1b65eb1f8",
-    "bytes": 30917
+    "sha256": "19a0cf6166c67a901d911490cae13b17fbd46a149de3e9bd842aaee72d579d3e",
+    "bytes": 31564
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/FootIKRig.cpp",
-    "sha256": "87c95415ff3f9c8f71ed425383e483cf2c70e38467652c05eb4cec38b14c125d",
-    "bytes": 23807
+    "sha256": "19287258337e88e4b1b840bbdbc96f7ea003385ee9038a9780ab599d381e077f",
+    "bytes": 24290
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/FootIKRigData.inc",
@@ -191,8 +191,8 @@
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/WaistLantern.cpp",
-    "sha256": "9a35b5ea7b79b787fcb61621daa42a6fd237d139410d89e07488734eb687c320",
-    "bytes": 16422
+    "sha256": "466ed64fad45b3e78d75f18ad4fd151ad4cc9fb9ef37c2a467c55637e191a5c5",
+    "bytes": 16795
   },
   {
     "path": "client/Extensions/WxlHost/NOTICE.md",
@@ -416,8 +416,8 @@
   },
   {
     "path": "client/Interface/AddOns/DialogUI/DialogUI.toc",
-    "sha256": "24ce176315ef10e3480944b9c3fe2c76705040f8590f174768a45d904aa60a35",
-    "bytes": 1363
+    "sha256": "4d8df934ce86a7f93cf5ec4eb004e9cbcf747e9a91ea2bb76d7acd37fec4aebf",
+    "bytes": 1422
   },
   {
     "path": "client/Interface/AddOns/DialogUI/LICENSE",
@@ -876,8 +876,8 @@
   },
   {
     "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/DialogUI_ImmersionCameraCompat.toc",
-    "sha256": "37ac536d8440ae7977531e6c583bcfc705a85032982c7c8c538bc549387cb7fa",
-    "bytes": 439
+    "sha256": "99697a07c581aa0baaeaf965b777d444ead7ba1a2319ed27b281c980b6e92a2d",
+    "bytes": 452
   },
   {
     "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/handwriting.lua",
@@ -906,8 +906,8 @@
   },
   {
     "path": "client/Interface/AddOns/DragonUI/DragonUI.toc",
-    "sha256": "432ad6317e87761cb6e0a2fd5f942722b1cda16aecb6ae5d363c5ea8ea61737a",
-    "bytes": 1201
+    "sha256": "60739bf37b6f952fed39a601a3b5bb3a24ca3f667d2f7d0d31e87d99af5cb1f8",
+    "bytes": 1236
   },
   {
     "path": "client/Interface/AddOns/DragonUI/DragonUI.xml",
@@ -7051,8 +7051,8 @@
   },
   {
     "path": "client/Interface/AddOns/Immersion/Immersion.toc",
-    "sha256": "753d16e2f665ec861d9ac3ad0cef4d872effc22209abe17d0f8d58a0cd65337f",
-    "bytes": 1040
+    "sha256": "6e9b8726e0b945228c4c3f727c84d11f009b54ec2916e5c19c2d6b6252fda948",
+    "bytes": 1096
   },
   {
     "path": "client/Interface/AddOns/Immersion/Interface.lua",
@@ -7606,8 +7606,8 @@
   },
   {
     "path": "client/Interface/AddOns/Immersion_DialogUITheme/Immersion_DialogUITheme.toc",
-    "sha256": "7c97fa4bae8897031578eb328931ac7e3b6a1b352c4758b31ebd5d15b4b63a13",
-    "bytes": 444
+    "sha256": "12e42a09a87e4374152f52b1cafdecffaefc59b2ffa9a4baeec62270f0cf1876",
+    "bytes": 455
   },
   {
     "path": "client/Interface/AddOns/Immersion_DialogUITheme/skin.lua",
@@ -8276,8 +8276,8 @@
   },
   {
     "path": "client/WoW/Source/Object/ObjectClient/Unit_C.cpp",
-    "sha256": "03abb4c626f2ef9fa9a3867a3c6ec2d725ca715487967695ec746e7ef2798554",
-    "bytes": 846643
+    "sha256": "cdb2ae706b24b11bbb9ee1e0c6f7f1bb29ec4d19844822390f3324a0b047564d",
+    "bytes": 847572
   },
   {
     "path": "client/WoW/Source/Ui/GameUI.cpp",
@@ -8296,23 +8296,23 @@
   },
   {
     "path": "client/WoW/Source/UIUtil/ActionCameraSettings.h",
-    "sha256": "4ac0b68e7bbfa62ebad8ce42e87199040b6ca42a73cea9a49df0da5cb23c449b",
-    "bytes": 3013
+    "sha256": "0f3aab97e0c74a483e554c5caf39c01a776cdc08f94528cc75c51a7d2cdca54a",
+    "bytes": 3085
   },
   {
     "path": "client/WoW/Source/UIUtil/Camera.cpp",
-    "sha256": "4c170fab51a5581948d7f5c0b1d8f8401761eced1922561c0db8332fa28d951c",
-    "bytes": 150994
+    "sha256": "2d513e4220fd1f09a51518301648458505bebec9bef545e4e911b766ef7bb173",
+    "bytes": 161042
   },
   {
     "path": "client/WoW/Source/UIUtil/Camera.h",
-    "sha256": "18df6da34da16fa8509c947741d36dc590b1c337bc01bfe962344e260c5f7a03",
-    "bytes": 15281
+    "sha256": "49f094866aa6b51c47641a40c522b125b264044b534bb2dcb5d849563c0bfe2d",
+    "bytes": 15982
   },
   {
     "path": "docs/BUILD.md",
-    "sha256": "8c05a50748927d50189e149e71f1493a82490fb2996f73239b11b1a3d8c2e305",
-    "bytes": 479
+    "sha256": "70e735be32482f9e5cf4ab3be3574ef01edb223f0a83f21277c48fb918e5e4bf",
+    "bytes": 1425
   },
   {
     "path": "licenses/Dear-ImGui-MIT.txt",
@@ -8361,8 +8361,8 @@
   },
   {
     "path": "client/Extensions/wxl-reticle-world-hover/wxl.json",
-    "sha256": "28157019a15b4243b0c3678e524dc47bb850e27830e73af4bd91782d352b0d7b",
-    "bytes": 387
+    "sha256": "1c7b2ea6d0add6fcd7144b11d5dc011cda815787acc33d1fb11750c2b0ec4095",
+    "bytes": 398
   },
   {
     "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-01.ini",
@@ -8431,13 +8431,13 @@
   },
   {
     "path": "client/Extensions/wxl-unit-hover-precision/wxl.json",
-    "sha256": "12a81fedddab50be1fed4e268fd002aaa3b49a66513582c6da64fd0684e5486f",
-    "bytes": 366
+    "sha256": "e0979c7f63a0fde88ac788b2d3c1e6a7b6d647b583bc70adbbfb26d297d98ef8",
+    "bytes": 377
   },
   {
     "path": "client/Extensions/wxl-world-object-tooltip-fade/wxl.json",
-    "sha256": "874c794dba2be35c9b3073dfcffc3a1109042bc9b3f9aa139fe3cf95a5e3dd19",
-    "bytes": 384
+    "sha256": "8df8a5cf0a4accfe8fbc2576a0a10bb9e93e2bade204190ae318f9ea35e91060",
+    "bytes": 395
   },
   {
     "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/ActionCameraDefaults.lua",
@@ -8471,13 +8471,13 @@
   },
   {
     "path": "client/Interface/AddOns/WXLReticleTooltipPosition/ReticleTooltipPosition.lua",
-    "sha256": "3aef1956bfa7a3b3eb3d9a2b54cf60749e9fcc77732fb3c0b1180725bab81888",
-    "bytes": 6949
+    "sha256": "4689aee4c0758e29b32c4d151ece7efc15023ffa759a2c8f3db0b9c3178d9c83",
+    "bytes": 7083
   },
   {
     "path": "client/Interface/AddOns/WXLReticleTooltipPosition/WXLReticleTooltipPosition.toc",
-    "sha256": "edee22b88a281f97c13c4cbe47cb7ca4d0401e25d73170f8cb1577e9fc544849",
-    "bytes": 356
+    "sha256": "cef69c0f8bf57fd0511db8a572925ee289911153623b5d032074d87415147417",
+    "bytes": 365
   },
   {
     "path": "client/WTF/WXL/HunterVisuals.ini",
@@ -8496,12 +8496,22 @@
   },
   {
     "path": "client/WTF/WXL/WarcraftXL.ini",
-    "sha256": "885eeb36ed79166400fcb8dd9a98f2110daffb44b68aeced03bf3889eefd7986",
-    "bytes": 7735
+    "sha256": "5007fa701b44725b6dc31a779db4e85afd43ddb7701fb2e3bd233dfb666e5588",
+    "bytes": 7904
   },
   {
     "path": "docs/action-camera-suite-1.0.4.2-hotfix.md",
-    "sha256": "2361a76500330c98d69d5e2b5c349bd0877d66c729d56bc4f757f46d11cef557",
-    "bytes": 2208
+    "sha256": "3c75efdb5e9b2b0b3b2735022aa247ecb890e69e42d104b8257e7cace901e30c",
+    "bytes": 2222
+  },
+  {
+    "path": "client/WoW/Source/UIUtil/MountCameraPolicy.h",
+    "sha256": "6177e28f2a2d1a304f6994bdcc6e2a887c99c609a3bb9b5fc470f01a864fbbd1",
+    "bytes": 5298
+  },
+  {
+    "path": "docs/native-mount-camera.md",
+    "sha256": "920d2d6dc7d14c111849dd017299f913213673a047aa7935d77170b40ab990e7",
+    "bytes": 4132
   }
 ]

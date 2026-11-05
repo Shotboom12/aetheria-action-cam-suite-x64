@@ -1,5 +1,7 @@
 #include "WoW/Source/WorldClient/HD/HdCataRipples.h"
 #include "WoW/Source/UIUtil/ActionCameraSettings.h"
+#include "WoW/Source/UIUtil/Camera.h"
+#include "WoW/Source/UIUtil/MountCameraPolicy.h"
 #include "Engine/Source/Retail/BodyShape.h"
 #include "Engine/Source/Retail/RacePolicy.h"
 #include "WoW/Common/ComponentCore/RetailRace.h"
@@ -89,6 +91,7 @@
 #include "WoW/Source/Ui/SpeedFlying.h"
 #include "WoW/Source/Ui/SpellBookFrame.h"
 #include "WoW/Source/Ui/Types.h"
+#include "WoW/Source/Ui/WorldFrame.h"
 #include "WoW/Source/WorldClient/AreaList.h"
 #include "WoW/Source/WorldClient/MapWeather.h"
 #include "WoW/Source/WorldClient/World.h"
@@ -10444,6 +10447,19 @@ void CGUnit_C::UpdateWorldTransform(float elapsed) {
         float scale = this->GetTrueScale();
         float facing = this->GetRenderFacing();
         model->SetWorldTransform(this->GetPosition(), facing, scale, this->m_groundNormal, 0xFFFFFFFF);
+
+        // Native 1.0.4.2 mount banking: rotate only this unit's freshly built
+        // mount instance transform. The model data and other riders remain
+        // untouched, and the adjustment is absent outside the active player.
+        CGCamera* camera = CGWorldFrame::GetActiveCamera();
+        if (model == this->m_mountModel && this->IsMounted() && camera &&
+            camera->m_targetGUID == this->m_obj->m_guid) {
+            float matrix[16];
+            static_assert(sizeof(C44Matrix) == sizeof(matrix), "Unexpected M2 transform layout");
+            std::memcpy(matrix, &model->m_worldTransform, sizeof(matrix));
+            MountCameraPolicy::ApplyBank(matrix, camera->m_actionMountPresentationRoll);
+            std::memcpy(&model->m_worldTransform, matrix, sizeof(matrix));
+        }
     }
 
     // Not in the original: ground normal smoothed and the model placed for this frame.
