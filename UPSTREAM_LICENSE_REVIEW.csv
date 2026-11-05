@@ -1,6 +1,6 @@
 addon_folder,original_license_or_notices,rights_cleared,author_ownership
 !!!ClassicAPI,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
-!ActionCameraAuthorSettings,CREDITS_AND_UPSTREAM_AUTHORS.txt,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
+!ActionCameraAuthorSettings,Not included; hotfix author manifest references absent Core.lua,NOT INCLUDED - folder absent from repository and hotfix payload,Hotfix 1.0.4.2 TOC does not require this legacy importer
 ActionCameraSuite_DragonUIPreset,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
 Camera_Max_Distance_Fix,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
 DialogUI,LICENSE,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
@@ -13,4 +13,4 @@ DragonUIFastPlayerTooltips,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND AR
 Immersion,LICENSE.md,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
 Immersion_DialogUITheme,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
 ShoulderPlayerCombatText,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
-WXLReticleTooltipPosition,NOT AUTOMATICALLY IDENTIFIED,NO - REVIEW TERMS AND ART PERMISSIONS,Upstream names in creator credits; custom companions may use upstream assets
+WXLReticleTooltipPosition,Project WXL; owner reports creator permission,NO STANDALONE LICENSE LOCATED - retain permission evidence and review before redistribution,1.0.4.2 Lua addon source; no artwork bundled by this package

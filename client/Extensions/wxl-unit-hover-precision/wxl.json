@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-unit-hover-precision",
+    "name": "Unit + Object Hover Precision",
+    "version": "1.0.3",
+    "abi": "1.1",
+    "entry": "wxl-unit-hover-precision.dll",
+    "description": "Retains 1.0.2 unit + model OBB filters; targeted fallback for quest-giving gameobjects via world bounds or bounded questgiver proxy."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-reticle-world-hover",
+    "name": "Reticle World Hover - Tooltip Distance Limit",
+    "version": "0.2.0",
+    "abi": "1.1",
+    "entry": "wxl-reticle-world-hover.dll",
+    "description": "Original player-tested v0.1.0 tooltip handling with opt-in configurable max world tooltip distance (default 10yd). No native anchor changes."
+  }
+}

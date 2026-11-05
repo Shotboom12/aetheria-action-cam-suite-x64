@@ -39,6 +39,13 @@ SEYRIS TOOLS
   A separate redistribution license was not identified in
   the upstream repository; confirm permission before wide release.
 
+WXL RETICLE TOOLTIP POSITION
+  Original author: Project WXL.
+  The Lua addon source is retained with the 1.0.4.2 hotfix integration.
+  The owner reports creator permission for bundled addon distribution;
+  no standalone license text was located. See the release-specific
+  permission and provenance notes before redistributing.
+
 WARCRAFTXL FRAMEWORK
   Original open-source project: WarcraftXL and contributors.
   Core source: https://github.com/WarcraftXL/wxl-core

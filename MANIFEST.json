@@ -1,8 +1,8 @@
 [
   {
     "path": "CREDITS_AND_UPSTREAM_AUTHORS.txt",
-    "sha256": "a2a3715aa32038ab7d8586c8f729cca3c10f52e7b44ed8e1c71ed051ddf41e81",
-    "bytes": 2907
+    "sha256": "7d23f63dcbbeb3941272755d60296ee4dd27a3a54b229599b2855e3700a4ecdb",
+    "bytes": 3243
   },
   {
     "path": "LICENSE_REVIEW.md",
@@ -11,8 +11,8 @@
   },
   {
     "path": "README.md",
-    "sha256": "640f3e7343f4f3f1d2a68ae68e231839ca69cb2853d9a470ca3dab841c4f1116",
-    "bytes": 2397
+    "sha256": "402265e1dc9fe1e351cc9e9e4b0b8a311b8658cdaec5c380114ae608d36dca99",
+    "bytes": 3215
   },
   {
     "path": "THIRD_PARTY_LICENSE_NOTICES.txt",
@@ -21,18 +21,18 @@
   },
   {
     "path": "UPSTREAM_LICENSE_REVIEW.csv",
-    "sha256": "48e5e25d4156ca53cbd48aee1aead7cb49504cb0dbd31b04dd2913806b399b47",
-    "bytes": 2549
+    "sha256": "39882ea20b2daa1bbd049e1efa7732b35a983a87d6854c5b8dc95d5195d02a20",
+    "bytes": 2641
   },
   {
     "path": "client/Addons/AetheriaActionCamera/AetheriaActionCamera.lua",
-    "sha256": "e2f30c60a3bf3d947b110b5f35c11710cda9dd3e2c216cbde5a683f85e66b1b6",
-    "bytes": 10540
+    "sha256": "105e47b1f96f0e42ccd869ef60bbe7b022375a8d694475fa679503157ad533a8",
+    "bytes": 10903
   },
   {
     "path": "client/Addons/AetheriaActionCamera/AetheriaActionCamera.toc",
-    "sha256": "e4e54fd0615ff8c4985af546f4cbd129f2ca5c2a73df7ec6fa1c9a24bace74c5",
-    "bytes": 233
+    "sha256": "541ee10236d97b486c852013e72387784179be463f3970cd95248b04592c1211",
+    "bytes": 262
   },
   {
     "path": "client/Addons/AetheriaActionCamera/Bindings.xml",
@@ -171,13 +171,13 @@
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/ActionCameraPort.cpp",
-    "sha256": "d6a759fa87a0a3219227689662b8f8f8b20c9e47ff99bd5f9ad6c176d9315af7",
-    "bytes": 13577
+    "sha256": "d21519e2b9629ee0a5995e339d8df1d65708e4708aff75b1485ec0e1b65eb1f8",
+    "bytes": 30917
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/FootIKRig.cpp",
-    "sha256": "9f5772025789bed7b1fe13afbc0369712031ad982d6d1c0b051c03cd6bd622e1",
-    "bytes": 21277
+    "sha256": "87c95415ff3f9c8f71ed425383e483cf2c70e38467652c05eb4cec38b14c125d",
+    "bytes": 23807
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/FootIKRigData.inc",
@@ -191,8 +191,8 @@
   },
   {
     "path": "client/Extensions/ActionCameraPort/src/WaistLantern.cpp",
-    "sha256": "6ea541d81a3bd58f0b3c7ad2b0021f6035fd0d99841d99337f932617e6b0bd11",
-    "bytes": 15482
+    "sha256": "9a35b5ea7b79b787fcb61621daa42a6fd237d139410d89e07488734eb687c320",
+    "bytes": 16422
   },
   {
     "path": "client/Extensions/WxlHost/NOTICE.md",
@@ -416,8 +416,8 @@
   },
   {
     "path": "client/Interface/AddOns/DialogUI/DialogUI.toc",
-    "sha256": "c23709697b053f438e9aab507bb8a816d2c6e874aebc661db286506b1bbd8da0",
-    "bytes": 1383
+    "sha256": "24ce176315ef10e3480944b9c3fe2c76705040f8590f174768a45d904aa60a35",
+    "bytes": 1363
   },
   {
     "path": "client/Interface/AddOns/DialogUI/LICENSE",
@@ -876,8 +876,8 @@
   },
   {
     "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/DialogUI_ImmersionCameraCompat.toc",
-    "sha256": "d24b9d7e307f1c4365a9607be18916e817e2737573b075bf411f3d4903956aba",
-    "bytes": 443
+    "sha256": "37ac536d8440ae7977531e6c583bcfc705a85032982c7c8c538bc549387cb7fa",
+    "bytes": 439
   },
   {
     "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/handwriting.lua",
@@ -906,8 +906,8 @@
   },
   {
     "path": "client/Interface/AddOns/DragonUI/DragonUI.toc",
-    "sha256": "1c6d874787712a0940c968b36e3f8f70db5196bdc6081669ca12379f862ccf3c",
-    "bytes": 1221
+    "sha256": "432ad6317e87761cb6e0a2fd5f942722b1cda16aecb6ae5d363c5ea8ea61737a",
+    "bytes": 1201
   },
   {
     "path": "client/Interface/AddOns/DragonUI/DragonUI.xml",
@@ -7051,8 +7051,8 @@
   },
   {
     "path": "client/Interface/AddOns/Immersion/Immersion.toc",
-    "sha256": "f3af4705c840a9170fde0a805f8b77d0e95289fc4c99073b3a0c13e0e5e6759c",
-    "bytes": 1066
+    "sha256": "753d16e2f665ec861d9ac3ad0cef4d872effc22209abe17d0f8d58a0cd65337f",
+    "bytes": 1040
   },
   {
     "path": "client/Interface/AddOns/Immersion/Interface.lua",
@@ -7606,8 +7606,8 @@
   },
   {
     "path": "client/Interface/AddOns/Immersion_DialogUITheme/Immersion_DialogUITheme.toc",
-    "sha256": "43ded932ab0fe24f9f310e3272cc34c628e159d6d04b538ce13b0d12bc6042ef",
-    "bytes": 448
+    "sha256": "7c97fa4bae8897031578eb328931ac7e3b6a1b352c4758b31ebd5d15b4b63a13",
+    "bytes": 444
   },
   {
     "path": "client/Interface/AddOns/Immersion_DialogUITheme/skin.lua",
@@ -8296,8 +8296,8 @@
   },
   {
     "path": "client/WoW/Source/UIUtil/ActionCameraSettings.h",
-    "sha256": "411df942e6511e4247c8d562b32d978ae732a9621eccd7703bb71a7fd6fb3f37",
-    "bytes": 925
+    "sha256": "4ac0b68e7bbfa62ebad8ce42e87199040b6ca42a73cea9a49df0da5cb23c449b",
+    "bytes": 3013
   },
   {
     "path": "client/WoW/Source/UIUtil/Camera.cpp",
@@ -8323,5 +8323,185 @@
     "path": "licenses/WxlHost-NOTICE.md",
     "sha256": "75a798a0152defcb628297ead4d40883017f10f15af808957eac3f26480fe291",
     "bytes": 1671
+  },
+  {
+    "path": "client/Extensions/wxl-action-cam/actioncam.ini",
+    "sha256": "92e8153263f857336adecffbe9a0f2ead05554e55199b39857cde0ce14d432b2",
+    "bytes": 896
+  },
+  {
+    "path": "client/Extensions/wxl-action-cam/wxl.json",
+    "sha256": "0e8dc62315bcf609d71c3e3d8cc0335fb8fede8c35d69c0f217acea73b9faa0d",
+    "bytes": 463
+  },
+  {
+    "path": "client/Extensions/wxl-actioncam-reticle/wxl.json",
+    "sha256": "090e7f069e0b49d125297f0313905c70eb67ff1476266a54cc06d591b53da592",
+    "bytes": 351
+  },
+  {
+    "path": "client/Extensions/wxl-foot-ik/footik.ini",
+    "sha256": "041f27b5b1f135a2a201138a8d2591f2de5fb4ee8e17c1cbd1ef07cc4e4c1b10",
+    "bytes": 412
+  },
+  {
+    "path": "client/Extensions/wxl-foot-ik/wxl.json",
+    "sha256": "f077af808410fef13accf16c47d471fa0d6b655cbab68744d8e74389fd8ab2e2",
+    "bytes": 379
+  },
+  {
+    "path": "client/Extensions/wxl-interaction-visuals/wxl.json",
+    "sha256": "1f7aea52a7e3d735cfe856cf99fd44b5f53f5c392762d00179d05b25af16e6c6",
+    "bytes": 351
+  },
+  {
+    "path": "client/Extensions/wxl-reticle-world-hover/reticlehover.ini",
+    "sha256": "8a67458afd3e50eded0119811fe27b8fa75804912d31d0b75f0c57c9ba470279",
+    "bytes": 83
+  },
+  {
+    "path": "client/Extensions/wxl-reticle-world-hover/wxl.json",
+    "sha256": "28157019a15b4243b0c3678e524dc47bb850e27830e73af4bd91782d352b0d7b",
+    "bytes": 387
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-01.ini",
+    "sha256": "74bd2f5591c2a207c4f00b9476e39b7e328255aef15a376fb926250d40e3a364",
+    "bytes": 4228
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-02.ini",
+    "sha256": "642a4b5443729147fe6a7cdc8432b4c7a12ec6c22ff8baff35deca09a2cefe00",
+    "bytes": 3703
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-03.ini",
+    "sha256": "3d4c367e21e6b00e2ef0ac2bda17efc6b9a0e5033731ec994226887df1b7a7b4",
+    "bytes": 3704
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-04.ini",
+    "sha256": "13a9a9e7839db28e79f281308b8e98346579c7c91ab585de83d7009e536eac28",
+    "bytes": 4232
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-05.ini",
+    "sha256": "c740630e91f7e82aeb340bd7007130a9358d9a184ef8c2c2433a0ba361defdfc",
+    "bytes": 3709
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-06.ini",
+    "sha256": "8c5586ed21844b26310f342b0929b336e775205ff835a6c594264c8510d9bad4",
+    "bytes": 3708
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-07.ini",
+    "sha256": "91446fa7745c6952cf4db7b53beff062374b038c9ec691fded4b578128c797b6",
+    "bytes": 3701
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-08.ini",
+    "sha256": "57be1b50fa842c40f2d3bf34b94782e575159c84e66d940b48e77ce05de17a19",
+    "bytes": 3710
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-10.ini",
+    "sha256": "f30f334002e1a014e6e2c728ae4274d7c34b29b0e6f5c9a669e9fe87ef4215a0",
+    "bytes": 3704
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera-race-11.ini",
+    "sha256": "e1c6dab6739c7b2e8c402098d6f0e18208d7d09c1d539363bbcc042c81fd215f",
+    "bytes": 3710
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/shouldercamera.ini",
+    "sha256": "674cafe468e5655b39a1b00b28a2bbe3ffc3eb106f0eba0aaf181931bfd87b13",
+    "bytes": 3661
+  },
+  {
+    "path": "client/Extensions/wxl-shoulder-camera/wxl.json",
+    "sha256": "69eaac772d2bf93a86631d708453a62afd255f354deb504a3e1b4f3c2a4e1d14",
+    "bytes": 744
+  },
+  {
+    "path": "client/Extensions/wxl-unit-hover-precision/hoverprecision.ini",
+    "sha256": "014ca39c59e83e0de36dcb855f1f39749dd4630399fcdbf7058c850032b64e3e",
+    "bytes": 76
+  },
+  {
+    "path": "client/Extensions/wxl-unit-hover-precision/wxl.json",
+    "sha256": "12a81fedddab50be1fed4e268fd002aaa3b49a66513582c6da64fd0684e5486f",
+    "bytes": 366
+  },
+  {
+    "path": "client/Extensions/wxl-world-object-tooltip-fade/wxl.json",
+    "sha256": "874c794dba2be35c9b3073dfcffc3a1109042bc9b3f9aa139fe3cf95a5e3dd19",
+    "bytes": 384
+  },
+  {
+    "path": "client/Interface/AddOns/DialogUI_ImmersionCameraCompat/ActionCameraDefaults.lua",
+    "sha256": "78ff9369064b00a0b7340a820d57964af1af0f54fd3859d06b300b68cc5d03c5",
+    "bytes": 409
+  },
+  {
+    "path": "client/Interface/AddOns/DialogUI/ActionCameraDefaults.lua",
+    "sha256": "28341f28c09080859015f6377624c0ee4c0b34741a782ff5425585750372cad9",
+    "bytes": 667
+  },
+  {
+    "path": "client/Interface/AddOns/DragonUI/ActionCameraDefaults.lua",
+    "sha256": "ad6a382875d866d6ed1d56b8df43feac3a63583ed482733dc8186c0d9f63306e",
+    "bytes": 37318
+  },
+  {
+    "path": "client/Interface/AddOns/Immersion_DialogUITheme/ActionCameraDefaults.lua",
+    "sha256": "92053c68aedb4e682a64585adb2f821fe55e4987999ffc18015db6cd2ce9a06d",
+    "bytes": 491
+  },
+  {
+    "path": "client/Interface/AddOns/Immersion/ActionCameraDefaults.lua",
+    "sha256": "00223fbce83fdffd69d9b7c3d16570384fcc18a57d1165547dbe4644a3f777f4",
+    "bytes": 1214
+  },
+  {
+    "path": "client/Interface/AddOns/WXLReticleTooltipPosition/ActionCameraDefaults.lua",
+    "sha256": "14ae045dc7d98a8690339e983e52989b19b6b3528e1ff58ac51ffa5b2af65699",
+    "bytes": 480
+  },
+  {
+    "path": "client/Interface/AddOns/WXLReticleTooltipPosition/ReticleTooltipPosition.lua",
+    "sha256": "3aef1956bfa7a3b3eb3d9a2b54cf60749e9fcc77732fb3c0b1180725bab81888",
+    "bytes": 6949
+  },
+  {
+    "path": "client/Interface/AddOns/WXLReticleTooltipPosition/WXLReticleTooltipPosition.toc",
+    "sha256": "edee22b88a281f97c13c4cbe47cb7ca4d0401e25d73170f8cb1577e9fc544849",
+    "bytes": 356
+  },
+  {
+    "path": "client/WTF/WXL/HunterVisuals.ini",
+    "sha256": "4066bc687126cba85c43a358813c606b40fdf2abbcfd7ec3cfe7c019173e8f51",
+    "bytes": 2003
+  },
+  {
+    "path": "client/WTF/WXL/QuickViews.ini",
+    "sha256": "96a244af7f084aeaffd0efcaa157685fe2e5fa7ff6fda62ec9822ef68150375c",
+    "bytes": 222
+  },
+  {
+    "path": "client/WTF/WXL/WaistLantern.ini",
+    "sha256": "dea7288615c41a4d9cb915732e8f446987e5174105f9de4c21121630903a80f2",
+    "bytes": 233
+  },
+  {
+    "path": "client/WTF/WXL/WarcraftXL.ini",
+    "sha256": "885eeb36ed79166400fcb8dd9a98f2110daffb44b68aeced03bf3889eefd7986",
+    "bytes": 7735
+  },
+  {
+    "path": "docs/action-camera-suite-1.0.4.2-hotfix.md",
+    "sha256": "2361a76500330c98d69d5e2b5c349bd0877d66c729d56bc4f757f46d11cef557",
+    "bytes": 2208
   }
 ]

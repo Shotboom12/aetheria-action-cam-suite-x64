@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: WXL Reticle Tooltip Position
+## Notes: Safe Lua anchor for native reticle world-object tooltips; no WXL native changes
+## Author: Project WXL
+## Version: 0.1.0-EXPERIMENTAL
+## OptionalDeps: DragonUI, DragonUIFastPlayerTooltips
+## SavedVariables: WXLReticleTooltipPositionDB
+ActionCameraDefaults.lua
+ReticleTooltipPosition.lua

@@ -3,8 +3,9 @@
 ## Notes: Visual-only theme: capped gossip slab, gold hover, feathered quest body edge, split title/body fonts; camera bridge unchanged.
 ## Version: 1.1.5-experimental
 ## Author: Warcraft AzerothCore Project
-## Dependencies: Immersion, DialogUI, DialogUI_ImmersionCameraCompat, !ActionCameraAuthorSettings
+## Dependencies: Immersion, DialogUI, DialogUI_ImmersionCameraCompat
 ## SavedVariables: DUIImmersionParchment
 ## DefaultState: Enabled
 
+ActionCameraDefaults.lua
 skin.lua

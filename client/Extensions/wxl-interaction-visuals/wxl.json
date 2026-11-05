@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-interaction-visuals",
+    "name": "WXL Interaction Visuals",
+    "version": "0.1.1",
+    "abi": "1.1",
+    "entry": "wxl-interaction-visuals.dll",
+    "description": "Interaction-only overhead NPC name and selection-circle suppression; paired with Immersion's InteractionNames.lua."
+  }
+}

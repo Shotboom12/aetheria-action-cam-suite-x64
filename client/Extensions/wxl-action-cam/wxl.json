@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-action-cam",
+    "name": "Action Cam - Owned Bot Fade/Interaction Exclusions",
+    "version": "1.0.28",
+    "abi": "1.1",
+    "entry": "wxl-action-cam.dll",
+    "description": "Selectable source-faithful crosshairs with original dot fallback; existing camera and reticle behavior with native cursor handoff for aimed spell placement. Read-only actual reticle visibility service for combat HUD."
+  }
+}

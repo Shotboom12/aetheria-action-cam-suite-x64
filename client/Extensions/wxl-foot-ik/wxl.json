@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-foot-ik",
+    "name": "WXL Player Foot IK",
+    "version": "0.2.1",
+    "abi": "1.1",
+    "entry": "wxl-foot-ik.dll",
+    "description": "Female Blood Elf settled idle knee stability: consistent bend plane near extension, retaining all-race profiles, terrain foot contact, locomotion and anti-fold safeguards."
+  }
+}

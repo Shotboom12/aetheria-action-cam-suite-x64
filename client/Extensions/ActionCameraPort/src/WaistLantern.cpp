@@ -16,6 +16,7 @@
 #include "WoW/Source/Extension/ScriptDefines/LuaScript.h"
 #include "WoW/Source/Extension/ExtensionMgr.h"
 #include "WoW/Source/Ui/WorldFrame.h"
+#include "WoW/Source/UIUtil/ActionCameraSettings.h"
 #include "WoW/Common/ComponentCore/Types.h"
 
 #include <string>
@@ -30,7 +31,7 @@ namespace {
     constexpr const char* kFolder = "Item\\ObjectComponents\\Weapon\\";
     CM2Model* lantern = nullptr; // Retains the creation reference independently of its parent.
     CM2Model* quiver = nullptr;
-    bool quiverEnabled = false;
+    bool& quiverEnabled = userSettings.quiverEnabled;
     // Cosmetic display IDs from the suite's audited Wrath quiver catalog.
     constexpr uint32_t kQuiverDisplays[] = {
         3337, 1244, 21328, 21712, 21321, 21332, 21318, 21330,
@@ -44,25 +45,25 @@ namespace {
     };
     constexpr int kQuiverCount = sizeof(kQuiverDisplays) / sizeof(kQuiverDisplays[0]);
     static_assert(kQuiverCount == sizeof(kQuiverNames) / sizeof(kQuiverNames[0]));
-    int quiverChoice = 0;
+    int& quiverChoice = userSettings.quiverChoice;
     int attachedQuiverChoice = -1;
-    C3Vector quiverOffset{0.0f, 0.0f, 0.0f};
-    C3Vector quiverRotation{0.0f, 0.0f, 0.0f};
-    float quiverScale = 1.0f;
+    C3Vector& quiverOffset = userSettings.quiverOffset;
+    C3Vector& quiverRotation = userSettings.quiverRotation;
+    float& quiverScale = userSettings.quiverScale;
     bool quiverPlacementDirty = true;
     bool quiverProfileLoaded = false;
-    int quiverVisibility = 0;
+    int& quiverVisibility = userSettings.quiverVisibility;
     constexpr const char* kQuiverVisibility[] = { "Always", "Weapons sheathed", "Weapons drawn" };
     const char* quiverStatus = "Off";
-    bool enabled = false;
-    bool nightOnly = false;
-    int slot = 0;
-    int startHour = 20;
-    int endHour = 6;
+    bool& enabled = userSettings.lanternEnabled;
+    bool& nightOnly = userSettings.lanternNightOnly;
+    int& slot = userSettings.lanternSlot;
+    int& startHour = userSettings.lanternStartHour;
+    int& endHour = userSettings.lanternEndHour;
     int manualOverride = -1;
-    C3Vector offset{0.0f, 0.0f, 0.0f};
-    C3Vector rotation{0.0f, 0.0f, 0.0f};
-    float scale = 1.0f;
+    C3Vector& offset = userSettings.lanternOffset;
+    C3Vector& rotation = userSettings.lanternRotation;
+    float& scale = userSettings.lanternScale;
     bool transformDirty = true;
     const char* status = "Off";
 
@@ -93,7 +94,17 @@ namespace {
     }
 
     void ApplyTransform() {
-        ApplyCosmeticTransform(lantern, offset, rotation, scale);
+        auto* parent = lantern ? lantern->m_attachParent : nullptr;
+        if (!parent || !(parent->m_fFlags & 1) || !parent->m_shared || !parent->m_shared->m_data)
+            return;
+        const auto anchor = lantern->m_attachmentId;
+        const auto& data = *parent->m_shared->m_data;
+        const uint16_t attachmentIndex = anchor < data.m_attachmentIndicesById.m_count
+            ? data.m_attachmentIndicesById[anchor] : 0xFFFF;
+        if (attachmentIndex >= data.m_attachments.m_count)
+            return;
+        const auto& attachment = data.m_attachments[attachmentIndex];
+        lantern->SetAttachmentFrame(attachment.m_bone, attachment.m_position + offset, scale, rotation);
         transformDirty = false;
     }
 
@@ -159,12 +170,6 @@ namespace {
             ClearLantern();
             ClearCosmetic(quiver);
             quiverProfileLoaded = false;
-            quiverEnabled = false;
-            quiverChoice = 0;
-            quiverVisibility = 0;
-            quiverOffset.Zero();
-            quiverRotation.Zero();
-            quiverScale = 1.0f;
             quiverPlacementDirty = true;
         }
     };
@@ -238,6 +243,13 @@ void UpdateHunterQuiver() {
 void RegisterWaistLantern() {
     new LanternLifecycle();
     sExtensionMgr->RegisterLuaFunction("AetheriaToggleWaistLantern", ToggleLantern, FRAMESCRIPT_CONTEXTS_GAME);
+}
+
+void NotifyActionCameraProfileApplied() {
+    manualOverride = -1;
+    transformDirty = true;
+    quiverPlacementDirty = true;
+    quiverProfileLoaded = true;
 }
 
 void UpdateWaistLantern() {

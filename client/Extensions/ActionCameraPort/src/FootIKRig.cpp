@@ -9,6 +9,7 @@
 #include "WoW/Source/ObjectMgrClient/ObjectMgrClient.h"
 #include "WoW/Source/Ui/WorldFrame.h"
 #include "WoW/Source/WorldClient/World.h"
+#include "WoW/Source/UIUtil/ActionCameraSettings.h"
 
 #include <cmath>
 #include <algorithm>
@@ -64,6 +65,23 @@ namespace {
             if (Matches(data, rig))
                 return &rig;
         return nullptr;
+    }
+
+    const char* RigMismatch(const M2Data& data, const RigFingerprint& rig, uint32_t& boneIndex) {
+        if (data.m_bones.m_count != rig.bones) return "bone count";
+        if (data.m_vertices.m_count != rig.vertices) return "vertex count";
+        for (uint32_t i = 0; i < rig.count; ++i) {
+            const auto& expected = rig.checks[i];
+            boneIndex = expected.index;
+            if (expected.index >= data.m_bones.m_count) return "bone index";
+            const auto& actual = data.m_bones[expected.index];
+            if (actual.m_parentIndex != static_cast<uint16_t>(expected.parent)) return "bone parent";
+            if (actual.m_boneNameCRC != expected.crc) return "bone name";
+            if (!(C3Vector::Distance(actual.m_pivot,
+                C3Vector(expected.pivot[0], expected.pivot[1], expected.pivot[2])) <= 0.001f))
+                return "bone pivot";
+        }
+        return "none";
     }
 
     bool PreviewLegSolve(const C3Vector& hip, const C3Vector& knee, const C3Vector& ankle,
@@ -210,11 +228,11 @@ namespace {
         }
     }
 
-    bool footPlacementEnabled = false;
-    bool movingFootPlacementEnabled = false;
-    bool slopeAlignmentEnabled = false;
-    bool pelvisCompensationEnabled = false;
-    bool footprintProbesEnabled = false;
+    bool& footPlacementEnabled = userSettings.footPlacementEnabled;
+    bool& movingFootPlacementEnabled = userSettings.movingFootPlacementEnabled;
+    bool& slopeAlignmentEnabled = userSettings.slopeAlignmentEnabled;
+    bool& pelvisCompensationEnabled = userSettings.pelvisCompensationEnabled;
+    bool& footprintProbesEnabled = userSettings.footprintProbesEnabled;
 
     C3Vector SampleSlope(const C3Vector& ankle, float groundZ, float scale) {
         const float spacing = std::clamp(0.15f * scale, 0.08f, 0.25f);
@@ -373,13 +391,37 @@ void EnableFootPelvisCompensation(bool enabled) { pelvisCompensationEnabled = en
 void EnableFootprintProbes(bool enabled) { footprintProbesEnabled = enabled; }
 
 const char* LocalFootIKRig() {
+    static thread_local char diagnostic[128];
     auto* player = CGWorldFrame::GetActiveCamera() ? ClntObjMgrGetActivePlayerObj() : nullptr;
     auto* model = player ? player->GetObjectModel() : nullptr;
     if (!model || !model->m_shared || !(model->m_shared->m_flags & 1) || !model->m_shared->m_data)
         return "Foot IK rig: waiting for player model";
-    if (const auto* rig = ResolveRig(*model->m_shared->m_data))
+    const auto& data = *model->m_shared->m_data;
+    if (const auto* rig = ResolveRig(data))
         return rig->name;
-    return "Foot IK rig: unsupported model";
+    const RigFingerprint* closest = nullptr;
+    double closestScore = std::numeric_limits<double>::infinity();
+    for (const auto& candidate : kRigs) {
+        const double boneDelta = std::fabs(static_cast<double>(data.m_bones.m_count) - candidate.bones) /
+            std::max<uint32_t>(candidate.bones, 1);
+        const double vertexDelta = std::fabs(static_cast<double>(data.m_vertices.m_count) - candidate.vertices) /
+            std::max<uint32_t>(candidate.vertices, 1);
+        const double score = boneDelta + vertexDelta;
+        if (score < closestScore) {
+            closest = &candidate;
+            closestScore = score;
+        }
+    }
+    uint32_t boneIndex = 0;
+    const char* mismatch = closest ? RigMismatch(data, *closest, boneIndex) : "no candidates";
+    if (closest && (std::strcmp(mismatch, "bone count") == 0 || std::strcmp(mismatch, "vertex count") == 0)) {
+        std::snprintf(diagnostic, sizeof(diagnostic), "Unsupported %uB/%uV; closest %s expects %uB/%uV",
+            data.m_bones.m_count, data.m_vertices.m_count, closest->name, closest->bones, closest->vertices);
+    } else {
+        std::snprintf(diagnostic, sizeof(diagnostic), "Unsupported %uB/%uV; closest %s: %s at bone %u",
+            data.m_bones.m_count, data.m_vertices.m_count, closest ? closest->name : "none", mismatch, boneIndex);
+    }
+    return diagnostic;
 }
 
 const char* ProbeLocalFootGround() {

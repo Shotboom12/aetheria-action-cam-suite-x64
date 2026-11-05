@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-world-object-tooltip-fade",
+    "name": "World Object Tooltip Native Fade",
+    "version": "1.0.0",
+    "abi": "1.1",
+    "entry": "wxl-world-object-tooltip-fade.dll",
+    "description": "Native gameobject-only tooltip fade acceleration to 150ms; leaves original DragonUIFastPlayerTooltips unit fade and Action Cam unchanged."
+  }
+}

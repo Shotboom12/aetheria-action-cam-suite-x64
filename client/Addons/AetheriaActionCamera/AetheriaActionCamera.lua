@@ -1,5 +1,6 @@
 BINDING_HEADER_AETHERIA_ACTION_CAMERA = "Aetheria Action Camera"
 BINDING_NAME_AETHERIA_WAIST_LANTERN = "Toggle waist lantern"
+AetheriaActionCameraProfile = type(AetheriaActionCameraProfile) == "table" and AetheriaActionCameraProfile or {}
 
 local driver = CreateFrame("Frame")
 local reticle = CreateFrame("Frame", nil, UIParent)
@@ -142,7 +143,7 @@ local interactionEvents = {
 local dialogueFrames = { "GossipFrame", "QuestFrame", "DGossipFrame", "DQuestFrame" }
 
 local function CursorNeeded()
-    if GetCurrentKeyBoardFocus() or SpellIsTargeting() or CursorHasItem() or
+    if AetheriaActionCameraNativeMenuOpen or GetCurrentKeyBoardFocus() or SpellIsTargeting() or CursorHasItem() or
         CursorHasSpell() or CursorHasMacro() then
         return true
     end
@@ -185,6 +186,7 @@ driver:RegisterEvent("PLAYER_CONTROL_LOST")
 driver:RegisterEvent("CINEMATIC_START")
 driver:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 driver:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
+driver:RegisterEvent("PLAYER_LOGOUT")
 for event in pairs(interactionEvents) do
     driver:RegisterEvent(event)
 end
@@ -209,6 +211,11 @@ driver:SetScript("OnEvent", function(_, event, timestamp, combatEvent, sourceGUI
     elseif event == "PLAYER_LEAVING_WORLD" then
         ReleaseMouseLook()
         inWorld = false
+    elseif event == "PLAYER_LOGOUT" then
+        if AetheriaSaveActionCameraProfile then
+            AetheriaSaveActionCameraProfile()
+        end
+        ReleaseMouseLook()
     elseif interactionEvents[event] then
         if ownsMouseLook or resumeAfterInteraction then
             PauseMouseLook()

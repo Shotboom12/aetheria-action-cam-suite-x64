@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-shoulder-camera",
+    "name": "WXL Shoulder Camera - Lux Replacement",
+    "version": "0.4.34",
+    "abi": "1.1",
+    "entry": "wxl-shoulder-camera.dll",
+    "description": "Per-character settings keyed by realm and GUID, adjustable race defaults based on preserved human settings, and remembered normal camera distance; retain transport, interaction and combat fixes. Read-only interaction camera service for companion staging. Adjustable gun recoil and gentle bow recoil/shake; crossbows unchanged. Bow release uses a single smooth sway and gentler, slower kick. Horizontal reticle facing with drawn melee weapons; native movement, animation timing and free-look retained."
+  }
+}

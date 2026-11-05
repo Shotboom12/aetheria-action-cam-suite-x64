@@ -1,0 +1,11 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-actioncam-reticle",
+    "name": "Action Cam - Viewport Independent Reticle",
+    "version": "0.5.5",
+    "abi": "1.1",
+    "entry": "wxl-actioncam-reticle.dll",
+    "description": "Original reticle interaction with optional Action Combat input ownership; legacy fallback preserved."
+  }
+}
