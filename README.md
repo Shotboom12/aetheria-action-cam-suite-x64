@@ -17,7 +17,7 @@ This repository contains source overlays and installable addon folders. It does 
 
 ## Requirements and integration
 
-Requires the Aetheria x64 wowdecomp client source, build dependencies, and legally obtained Wrath 3.3.5a build 12340 data. This is an overlay package, not a complete standalone client or stock-client drop-in.
+Requires the Aetheria x64 wowdecomp client source, build dependencies, and legally obtained Wrath 3.3.5a build 12340 data. This is an overlay package, not a complete standalone client or stock-client drop-in. The native port currently targets Aetheria's x64 APIs; another x64 client is not a drop-in target. A client developer can adapt the source to a compatible fork using the [porting guide](docs/porting-to-other-x64-clients.md).
 
 Copy source overlays under `client/` into corresponding paths of the matching Aetheria x64 source tree. Merge addon folders into `Interface/AddOns`. Include WxlHost.cmake and all ActionCameraPort sources in the native target. Review against the exact Aetheria baseline before building. Use the Aetheria guarded PowerShell 7 client build procedure with four workers. Back up the executable, addons, `Extensions/`, and `WTF/WXL/` settings before installing. The 1.0.4.2 hotfix replaces native WXL default/configuration files under `Extensions/` and `WTF/WXL/`; back these up or merge personal changes before copying. Addon SavedVariables are separate and are not replaced by these defaults.
 

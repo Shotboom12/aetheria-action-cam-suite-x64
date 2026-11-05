@@ -11,8 +11,8 @@
   },
   {
     "path": "README.md",
-    "sha256": "6d6682d1ed41889b1c049966c4775774673c2effcf204ccaa3a14ecb0d9877f0",
-    "bytes": 3593
+    "sha256": "5d0cebc51ebcff894dc5d33913610229e6966b1a6c33f2fcc7a35226a3522382",
+    "bytes": 3818
   },
   {
     "path": "THIRD_PARTY_LICENSE_NOTICES.txt",
@@ -8513,5 +8513,10 @@
     "path": "docs/native-mount-camera.md",
     "sha256": "920d2d6dc7d14c111849dd017299f913213673a047aa7935d77170b40ab990e7",
     "bytes": 4132
+  },
+  {
+    "path": "docs/porting-to-other-x64-clients.md",
+    "sha256": "585f8dddec53e1a835f6ff9c555aaa5102fee4aadd78b7d1624d463a7d453c55",
+    "bytes": 6245
   }
 ]
